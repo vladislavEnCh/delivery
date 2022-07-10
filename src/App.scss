@@ -1,0 +1,65 @@
+.error{
+    color: red;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn{
+    width: 120px;
+    background-color: rgb(245, 219, 102);
+    border-radius: 20px;
+    border: 2px solid rgb(189, 188, 188);
+    cursor: pointer;
+    margin: 0 0 20px 0;
+
+    &:hover{
+        background-color: rgb(247, 229, 148);
+    }
+    &:disabled{
+        background-color: rgb(122, 122, 122);
+        cursor: not-allowed;
+
+    }
+    &_text{
+        text-align: center;
+        margin: 10px 20px 10px 20px;
+    }
+}
+
+.anactive{
+    color: rgb(153, 153, 153);
+    cursor: not-allowed !important;
+}
+.active{
+    color: rgb(36, 36, 36);
+}
+
+.input{
+    width: 375px;
+    color: #000;
+    height: 55px;
+    border: none;
+    background-color: #00000017;
+    &_password{
+        margin: 50px 0 0 0;
+    }
+}
+
+
+
+  /* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 1px; /* высота для горизонтального скролла */
+    background-color: #686868;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #fccd35;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    display: none;
+}

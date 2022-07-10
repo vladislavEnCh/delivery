@@ -1,0 +1,88 @@
+.container{
+    margin: 30px 0 0 0;
+    width: 90%;
+    margin: 0 auto;
+}
+.wrapper{
+    scroll-behavior: auto;
+    display: flex;
+    height: 80vh;
+}
+.shops{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px 0 0;
+    border-radius: 20px;
+    width: 30%;
+    background-color: rgb(216, 216, 216);
+    &_tittle{
+        text-align: center;
+        margin: 20px 0 0 0;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &_element{
+        cursor: pointer;
+        width: 200px;
+        height: 60px;
+        border-radius: 20px;
+        background-color: rgb(138, 138, 138);
+        margin: 20px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background-color: rgb(177, 177, 177);
+        }
+    }
+    &_shops_name{
+        
+    }
+}
+.products{
+    scroll-behavior: auto;
+    overflow-y: scroll;
+    background-color: rgb(216, 215, 215);
+    
+    &_card{
+        display: inline-block;
+        width: 300px;
+        margin: 30px;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+    &_choose{
+        margin: 50px;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &_name{
+        text-align: center;
+        font-size: 19px;
+        font-weight: 700;
+        margin: 0px 0 20px 0;
+        padding: 15px 0 0 0;
+    }
+    &_photo{
+        width: 90%;
+        border-radius: 10px;
+        height: 150px;
+        border: 1px solid #000;
+    }
+    &_desc{
+        opacity: 0.6;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+        margin: 10px 0 0 0 ;
+    }
+    &_price{
+        font-weight: 500;
+        margin: 15px 0 20px 0;
+        padding: 0 0 15px 0;
+    }
+    
+}

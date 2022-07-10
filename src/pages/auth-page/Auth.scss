@@ -1,0 +1,74 @@
+.login{
+    &_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    &_img{
+        width: 50%;
+        &_container{
+            height: 100vh;
+            max-width: 720px;
+        }
+    }
+    &_form{
+        max-width: 720px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      
+    }
+    &_register{
+        margin: 150px 0 0 50px;
+        text-align: center;
+        font-weight: 600;
+        &_button{
+            cursor: pointer;
+            line-height: 22px;
+            font-size: 15px;
+            color: rgb(253, 196, 72);
+        }
+    }
+}
+.input{
+    width: 375px;
+    color: #000;
+    height: 55px;
+    border: none;
+    background-color: #00000017;
+    &_password{
+        margin: 50px 0 0 0;
+    }
+}
+.form{
+    &_container{
+        margin: 100px 0 0 25%;
+    }
+    &_logo{
+        
+       margin: 0 0 0 80px;
+        height: 37px;
+    }
+    &_name{
+        
+        margin: 38px 0 0 120px;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    &_input{
+        margin: 61px 0 0 0;
+    }
+    &_button{
+        cursor: pointer;
+        width: 375px;
+        height: 42px;
+        background-color: #fda430;
+        margin: 57px 0 0 0;
+    }
+}
+
+.error{
+    color: red;
+    font-size: 12px;
+}

@@ -1,0 +1,38 @@
+.wrappere{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.history{
+    &_items{
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        border-radius: 20px;
+        max-height: 50vh;
+        border:2px solid #000;
+    }
+    &_filter{
+        margin: 30px 0;
+        height: 50%;
+        border-radius: 20px;
+        border:2px solid #000;
+    }
+    &_controls{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &_input{
+        margin: 40px 0;
+    }
+    &_nothing{
+        margin: 20px auto;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}

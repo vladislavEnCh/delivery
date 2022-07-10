@@ -1,0 +1,59 @@
+.container{
+    padding: 30px 0 0 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: flex;
+    height: 70vh;
+
+}
+
+.cart{
+    &_products{
+        width: 50%;
+        margin: 0 0 0 20px;
+   
+    }
+    &_order{
+        width: 50%;
+        border-radius: 20px;
+        border: 2px solid #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &_input{
+        margin: 20px 0;
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    &_items{
+        border-radius: 20px;
+        height: 70%;
+        border: 2px solid #000;
+        scroll-behavior: auto;
+        overflow-y: scroll;
+        display: flex   ;
+        flex-direction: column;
+        align-items: center;
+    }
+    &_empty{
+        text-align: center;
+        margin: 40px 0 0 0;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &_submit{
+        width: 15em;
+        height: 2em;
+        font-size: 17px;
+    }
+    &_total{
+        font-size: 17px;
+        font-weight: 500;
+    }
+}
