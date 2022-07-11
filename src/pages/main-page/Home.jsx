@@ -31,7 +31,6 @@ function Home() {
   const addToCartHandler = (product) => {
     dispatch(addProductToCart(product));
     setActiveShop(product.shopName);
-    console.log('1', product.shopName);
   };
   return (
     <div className="container">
@@ -53,7 +52,7 @@ function Home() {
           ))}
         </div>
         <div className="products">
-          {activeShop ? (
+          {products?.length ? (
             products?.map((product, index) => {
               return (
                 <dir key={index} className="products_card">
