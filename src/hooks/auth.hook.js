@@ -17,11 +17,11 @@ export const useAuth = () => {
   }, [])
 
 
-  const logout = () => {
+  const logout = useCallback(() => {
     setToken(null)
     setUserId(null)
     localStorage.removeItem(storageName)
-  }
+  }, [])
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem(storageName))

@@ -1,5 +1,4 @@
 import {  $noauth, $request} from "./index";
-import jwt_decode from "jwt-decode";
 
 export const getAllShops = async () => {
     const {data} = await $request.get('api/shops')
