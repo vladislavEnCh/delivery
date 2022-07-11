@@ -52,27 +52,23 @@ function Home() {
           ))}
         </div>
         <div className="products">
-          {products?.length ? (
-            products?.map((product, index) => {
-              return (
-                <dir key={index} className="products_card">
-                  <div className="products_name">{product.name}</div>
-                  <div className="products_photo">photo</div>
-                  <div className="products_desc">{product.description}</div>
-                  <div className="products_price">Price:{product.price}</div>
+          {products?.map((product, index) => {
+            return (
+              <dir key={index} className="products_card">
+                <div className="products_name">{product.name}</div>
+                <div className="products_photo">photo</div>
+                <div className="products_desc">{product.description}</div>
+                <div className="products_price">Price:{product.price}</div>
 
-                  <div
-                    onClick={() => addToCartHandler(product)}
-                    className="products_button">
-                    {' '}
-                    <Button text={'Add to cart'} />
-                  </div>
-                </dir>
-              );
-            })
-          ) : (
-            <div className="products_choose">Choose Store</div>
-          )}
+                <div
+                  onClick={() => addToCartHandler(product)}
+                  className="products_button">
+                  {' '}
+                  <Button text={'Add to cart'} />
+                </div>
+              </dir>
+            );
+          })}
         </div>
       </div>
     </div>
