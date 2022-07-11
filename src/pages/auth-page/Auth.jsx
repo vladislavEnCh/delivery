@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 
 import { AuthContext } from '../../context/AuthContext';
-import { useHttp } from '../../hooks/http.hook';
 import { loginRequest } from '../../http/shopsAPI';
 import './Auth.scss';
 
@@ -31,8 +30,7 @@ export const Auth = () => {
   const emailHandler = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setEmail(e.target.value);
-    const validators =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const validators = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
     if (!validators.test(String(e.target.value).toLowerCase())) {
       setEmailError('uncorrect email');
     } else {
@@ -67,6 +65,8 @@ export const Auth = () => {
       case 'password':
         setPasswordDirty(true);
         break;
+      default:
+        return;
     }
   };
 

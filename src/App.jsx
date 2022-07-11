@@ -10,19 +10,15 @@ import History from './pages/History/History';
 import Home from './pages/main-page/Home';
 
 function App() {
-  const { token, login, logout, userId, ready } = useAuth();
+  const { token, login, logout, userId } = useAuth();
   let isAuthenticated = !!token;
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (!isAuthenticated) {
-  //     console.log(token);
-  //     navigate('login');
-  //   }
-  //   isAuthenticated = !!token;
-  // }, [token, isAuthenticated]);
-  // if (!ready) {
-  //   return <div>Login...</div>;
-  // }
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('login');
+    }
+  }, [token, isAuthenticated, navigate]);
+
   return (
     <AuthContext.Provider
       value={{

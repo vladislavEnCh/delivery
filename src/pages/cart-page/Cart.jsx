@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from '../../components/Button/Button';
 import CartItem from '../../components/CartItems/CartItem';
 import { createOrder } from '../../http/shopsAPI';
 import {
@@ -46,8 +45,7 @@ function Cart() {
   const emailHandler = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     setEmailInput(e.target.value);
-    const validators =
-      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const validators = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
     if (!validators.test(String(e.target.value).toLowerCase())) {
       setEmailError('uncorrect email');
     } else {
@@ -95,6 +93,8 @@ function Cart() {
       case 'adress':
         setAdressDirty(true);
         break;
+      default:
+        return;
     }
   };
   // =================================

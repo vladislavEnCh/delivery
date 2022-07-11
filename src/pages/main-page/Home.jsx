@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Button from '../../components/Button/Button';
 import { getAllShops, getProducts } from '../../http/shopsAPI';
 import { addProductToCart } from '../../store/actions/cart';
 import './Home.scss';
 
 function Home() {
-  const { items } = useSelector(({ cart }) => cart);
   const [shops, setShop] = useState([]);
   const [shopName, setShopName] = useState('');
   const dispatch = useDispatch();
@@ -18,9 +17,6 @@ function Home() {
       setShop(data.shop);
     });
   }, []);
-  // useEffect(() => {
-  //   console.log('first')
-  // }, [shops]);
 
   useEffect(() => {
     getProducts(shopName).then((data) => {
@@ -48,7 +44,7 @@ function Home() {
               onClick={() => chooseShopHandler(shop)}
               key={index}
               className={` ${
-                !activeShop || shop.name == activeShop
+                !activeShop || shop.name === activeShop
                   ? 'shops_element active'
                   : ' shops_element anactive'
               }`}>
